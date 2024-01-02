@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  margin: 20px;
+  margin-top: 80px;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+.square {
+  background: black;
+  color: white;
+  border: none;
+  float: left;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.square.top {
+  border-bottom-style: solid;
+}
+.square.left {
+  border-right-style: solid;
+}
+.square.right {
+  border-left-style: solid;
+}
+.square.bottom {
+  border-top-style: solid;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game-info {
+  margin-left: 40px;
+}
+
+li>button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 8px;
+  width: 115px;
+}
+
+.winner {
+  background-color: white;
+  color: black;
+}
+
+.selected {
+  color: rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+
+p {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+@media (max-width: 520px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+  }
+  .game-info {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .square {
+    width: 25vw;
+    height: 25vw;
+    font-size: 50px;
+  }
+}
+
